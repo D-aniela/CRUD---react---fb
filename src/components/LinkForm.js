@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // useState, crear el estado de la aplicación
 // El estado son datos que pertenecen a un componente
 
-const LinkForm = () => {
+const LinkForm = (props) => {
   const initialStateValues = {
     url: "",
     name: "",
@@ -23,7 +23,7 @@ const LinkForm = () => {
   //handleSubmit recibe información del evento
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values);
+    props.addOrEditLink(values);
   };
 
   return (
